@@ -1,17 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Ejercicio 2.3 - Estado de un objeto: clase Automovil
-
-Un automóvil tiene marca, modelo (año), motor (litros), tipo de combustible,
-tipo de automóvil, número de puertas, cantidad de asientos, velocidad máxima,
-color y velocidad actual. Incluye métodos get/set, acelerar, desacelerar,
-frenar, calcular el tiempo estimado de llegada e imprimir.
-
-Ejecución en Colab:  %run ejercicio_2_3_automovil.py
-"""
-
 from enum import Enum
-
 
 class TipoCombustible(Enum):
     GASOLINA = "GASOLINA"
@@ -20,7 +7,6 @@ class TipoCombustible(Enum):
     BIODIESEL = "BIODIESEL"
     GAS_NATURAL = "GAS_NATURAL"
 
-
 class TipoAutomovil(Enum):
     CIUDAD = "CIUDAD"
     SUBCOMPACTO = "SUBCOMPACTO"
@@ -28,7 +14,6 @@ class TipoAutomovil(Enum):
     FAMILIAR = "FAMILIAR"
     EJECUTIVO = "EJECUTIVO"
     SUV = "SUV"
-
 
 class Color(Enum):
     BLANCO = "BLANCO"
@@ -40,7 +25,6 @@ class Color(Enum):
     AZUL = "AZUL"
     VIOLETA = "VIOLETA"
 
-
 class Automovil:
     """Modela un automóvil. Los atributos llevan _ y se acceden con get/set."""
 
@@ -49,18 +33,17 @@ class Automovil:
                  numero_puertas: int, cantidad_asientos: int,
                  velocidad_maxima: int, color: Color):
         """Constructor. La velocidad actual inicia en 0."""
-        self._marca = marca                          # Fabricante
-        self._modelo = modelo                        # Año de fabricación
-        self._motor = motor                          # Cilindraje en litros
-        self._tipo_combustible = tipo_combustible    # Enumerado
-        self._tipo_automovil = tipo_automovil        # Enumerado
+        self._marca = marca                          
+        self._modelo = modelo                        
+        self._motor = motor                          
+        self._tipo_combustible = tipo_combustible    
+        self._tipo_automovil = tipo_automovil        
         self._numero_puertas = numero_puertas
         self._cantidad_asientos = cantidad_asientos
-        self._velocidad_maxima = velocidad_maxima    # km/h
-        self._color = color                          # Enumerado
-        self._velocidad_actual = 0                   # km/h
+        self._velocidad_maxima = velocidad_maxima   
+        self._color = color                         
+        self._velocidad_actual = 0                  
 
-    # ---------------------------- Métodos get ----------------------------
     def get_marca(self) -> str:
         return self._marca
 
@@ -91,7 +74,6 @@ class Automovil:
     def get_velocidad_actual(self) -> int:
         return self._velocidad_actual
 
-    # ---------------------------- Métodos set ----------------------------
     def set_marca(self, marca: str) -> None:
         self._marca = marca
 
@@ -122,7 +104,6 @@ class Automovil:
     def set_velocidad_actual(self, velocidad_actual: int) -> None:
         self._velocidad_actual = velocidad_actual
 
-    # ------------------------- Comportamiento ----------------------------
     def acelerar(self, incremento_velocidad: int) -> None:
         """Incrementa la velocidad sin superar la velocidad máxima."""
         if self._velocidad_actual + incremento_velocidad <= self._velocidad_maxima:
@@ -162,7 +143,6 @@ class Automovil:
         print(f"Color = {self._color.name}")
         print(f"Velocidad actual (km/h) = {self._velocidad_actual}")
 
-
 def main() -> None:
     """Crea un automóvil y realiza varios cambios en su velocidad."""
     auto1 = Automovil("Ford", 2018, 3, TipoCombustible.DIESEL,
@@ -186,7 +166,6 @@ def main() -> None:
 
     auto1.desacelerar(20)   # Debe mostrar el mensaje de velocidad negativa
     print(f"Velocidad actual = {auto1.get_velocidad_actual()} km/h")
-
 
 if __name__ == "__main__":
     main()
