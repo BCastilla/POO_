@@ -1,10 +1,3 @@
-"""
-Esta clase define objetos de tipo Persona con un nombre, apellidos,
-número de documento de identidad y año de nacimiento.
-Ejercicio 2.1. Definición de clases.
-"""
-
-
 class Persona:
     def __init__(self, nombre: str, apellidos: str,
                  num_documento_identidad: str, anyo_nacimiento: int):
