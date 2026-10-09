@@ -26,7 +26,6 @@ class Color(Enum):
     VIOLETA = "VIOLETA"
 
 class Automovil:
-    """Modela un automóvil. Los atributos llevan _ y se acceden con get/set."""
 
     def __init__(self, marca: str, modelo: int, motor: float,
                  tipo_combustible: TipoCombustible, tipo_automovil: TipoAutomovil,
