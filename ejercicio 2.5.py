@@ -63,9 +63,6 @@ def main() -> None:
     cuenta.retirar(400000)
     cuenta.consultar_saldo()
     print()
-    cuenta.retirar(500000)   # Supera el saldo: debe ser rechazado
-    cuenta.consignar(-100)   # Valor inválido: debe ser rechazado
-
-
+   
 if __name__ == "__main__":
     main()
