@@ -1,25 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-Ejercicio 2.5 - Métodos con parámetros: clase CuentaBancaria
-
-Una cuenta bancaria tiene nombres y apellidos del titular, número de cuenta,
-tipo (ahorros o corriente) y saldo (inicia en cero). Permite imprimir sus
-datos, consultar el saldo, consignar y retirar un valor.
-
-Ejecución en Colab:  %run ejercicio_2_5_cuenta_bancaria.py
-"""
-
 from enum import Enum
-
 
 class TipoCuenta(Enum):
     AHORROS = "AHORROS"
     CORRIENTE = "CORRIENTE"
-
-
+    
 class CuentaBancaria:
-    """Modela una cuenta bancaria."""
-
+    
     def __init__(self, nombres_titular: str, apellidos_titular: str,
                  numero_cuenta: int, tipo_cuenta: TipoCuenta):
         """Constructor. El saldo no se recibe: inicialmente es cero."""
