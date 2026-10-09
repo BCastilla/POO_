@@ -1,5 +1,4 @@
 class Persona:
-    """Modela una persona."""
 
     def __init__(self, nombre: str, apellidos: str,
                  numero_documento_identidad: str, ano_nacimiento: int):
