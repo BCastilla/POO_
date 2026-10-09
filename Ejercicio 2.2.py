@@ -1,7 +1,6 @@
 from enum import Enum
 
 class TipoPlaneta(Enum):
-    """Tipo de planeta de acuerdo con su tamaño."""
     GASEOSO = "GASEOSO"
     TERRESTRE = "TERRESTRE"
     ENANO = "ENANO"
