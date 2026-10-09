@@ -29,7 +29,6 @@ class Rectangulo:
         """Perímetro = 2 * base + 2 * altura"""
         return 2 * self.base + 2 * self.altura
 
-
 class Cuadrado:
     """Cuadrado definido por la longitud de su lado (cm)."""
 
@@ -43,7 +42,6 @@ class Cuadrado:
     def calcular_perimetro(self) -> float:
         """Perímetro = 4 * lado"""
         return 4 * self.lado
-
 
 class TrianguloRectangulo:
     """Triángulo rectángulo definido por su base y altura (catetos, en cm)."""
@@ -65,19 +63,16 @@ class TrianguloRectangulo:
         return self.base + self.altura + self.calcular_hipotenusa()
 
     def determinar_tipo_triangulo(self) -> str:
-        """Clasifica el triángulo según sus tres lados (base, altura, hipotenusa).
-        Nota: en un triángulo rectángulo la hipotenusa siempre es mayor que cada
-        cateto, así que en la práctica solo resultan escaleno o isósceles."""
+    
         a, b, c = self.base, self.altura, self.calcular_hipotenusa()
         ab = math.isclose(a, b)
         ac = math.isclose(a, c)
         bc = math.isclose(b, c)
         if ab and ac and bc:
-            return "equilátero"      # Los tres lados iguales
+            return "equilátero"    
         if not ab and not ac and not bc:
-            return "escaleno"        # Los tres lados diferentes
-        return "isósceles"           # Exactamente dos lados iguales
-
+            return "escaleno"        
+        return "isósceles"          
 
 class PruebaFiguras:
     """Clase de prueba: contiene el método main (punto de entrada)."""
@@ -103,10 +98,8 @@ class PruebaFiguras:
         print(f"La hipotenusa del triángulo es = {figura4.calcular_hipotenusa()}")
         print(f"Es un triángulo {figura4.determinar_tipo_triangulo()}")
 
-        # Prueba extra: catetos iguales -> triángulo isósceles
         figura5 = TrianguloRectangulo(4, 4)
         print(f"El triángulo (4, 4) es {figura5.determinar_tipo_triangulo()}")
-
 
 if __name__ == "__main__":
     PruebaFiguras.main()
