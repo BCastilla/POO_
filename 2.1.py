@@ -17,13 +17,14 @@ class Persona:
 
 def main() -> None:
     """Crea dos personas y muestra los valores de sus atributos."""
-    persona1 = Persona("Luis", "Pérez Gómez", "79345678", 1990)
-    persona2 = Persona("Ana", "Torres Ruiz", "52987654", 1985)
+    nombre = input("Nombre: ")
+    apellidos = input("Apellidos: ")
+    documento = input("Documento de identidad: ")
+    anyo = int(input("Año de nacimiento: "))
 
-    persona1.imprimir()
+    persona = Persona(nombre, apellidos, documento, anyo)
     print()
-    persona2.imprimir()
-
+    persona.imprimir()
 
 if __name__ == "__main__":
     main()
