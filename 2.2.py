@@ -1,15 +1,8 @@
-"""
-Ejercicio 2.2. Definición de atributos de una clase con tipos primitivos.
 
-Esta clase define objetos de tipo Planeta con un nombre, cantidad de
-satélites, masa, volumen, diámetro, distancia media al Sol, tipo de planeta
-y si es observable a simple vista.
-"""
 from enum import Enum
 
 
 class TipoPlaneta(Enum):
-    """Tipo de planeta de acuerdo con su tamaño (tipo enumerado)."""
     GASEOSO = "GASEOSO"
     TERRESTRE = "TERRESTRE"
     ENANO = "ENANO"
