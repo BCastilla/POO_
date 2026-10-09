@@ -1,16 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Ejercicio 2.4 - Métodos con y sin valores de retorno: figuras geométricas
-
-Clases: Circulo, Rectangulo, Cuadrado y TrianguloRectangulo (todas con área y
-perímetro). El triángulo rectángulo además calcula su hipotenusa y determina
-su tipo. La clase PruebaFiguras contiene el método main.
-
-Ejecución en Colab:  %run ejercicio_2_4_figuras.py
-"""
-
 import math
-
 
 class Circulo:
     """Círculo definido por su radio (cm)."""
@@ -25,7 +13,6 @@ class Circulo:
     def calcular_perimetro(self) -> float:
         """Perímetro = 2 * pi * radio"""
         return 2 * math.pi * self.radio
-
 
 class Rectangulo:
     """Rectángulo definido por su base y altura (cm)."""
