@@ -1,17 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Ejercicio 2.2 - Atributos con tipos primitivos y enumerados: clase Planeta
-
-Un planeta tiene nombre, cantidad de satélites, masa (kg), volumen (km³),
-diámetro (km), distancia media al Sol (km), tipo (enumerado) y si es
-observable a simple vista. Se calcula su densidad y si es un planeta exterior
-(más allá del cinturón de asteroides, que llega hasta 3.4 UA).
-
-Ejecución en Colab:  %run ejercicio_2_2_planeta.py
-"""
-
 from enum import Enum
-
 
 class TipoPlaneta(Enum):
     """Tipo de planeta de acuerdo con su tamaño."""
@@ -31,14 +18,14 @@ class Planeta:
                  distancia_sol: int = 0, tipo: TipoPlaneta = None,
                  es_observable: bool = False):
         """Constructor. Los valores por defecto son los valores iniciales del enunciado."""
-        self.nombre = nombre                          # Nombre (inicial: None)
-        self.cantidad_satelites = cantidad_satelites  # Satélites (inicial: 0)
-        self.masa = masa                              # Masa en kg (inicial: 0)
-        self.volumen = volumen                        # Volumen en km³ (inicial: 0)
-        self.diametro = diametro                      # Diámetro en km (inicial: 0)
-        self.distancia_sol = distancia_sol            # Distancia media al Sol en km (inicial: 0)
-        self.tipo = tipo                              # Tipo de planeta (enumerado)
-        self.es_observable = es_observable            # Observable a simple vista (inicial: False)
+        self.nombre = nombre                          
+        self.cantidad_satelites = cantidad_satelites  
+        self.masa = masa                              
+        self.volumen = volumen                       
+        self.diametro = diametro                     
+        self.distancia_sol = distancia_sol            
+        self.tipo = tipo                             
+        self.es_observable = es_observable            
 
     def imprimir(self) -> None:
         """Imprime en pantalla los valores de los atributos del planeta."""
