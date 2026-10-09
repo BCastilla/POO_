@@ -1,15 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Ejercicio 2.1 - Definición de clases: clase Persona
-
-Una persona tiene nombre, apellidos, número de documento de identidad y año
-de nacimiento. La clase tiene un constructor que inicializa sus atributos y un
-método que imprime sus valores en pantalla.
-
-Ejecución en Colab:  %run ejercicio_2_1_persona.py
-"""
-
-
 class Persona:
     """Modela una persona."""
 
